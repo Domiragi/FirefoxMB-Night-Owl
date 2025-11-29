@@ -1,9 +1,16 @@
 /* ----- Move menu buttons to the left side ----- */
   
-  #nav-bar #PanelUI-button #PanelUI-menu-button {
-   padding-right: 4px !important;
-   padding-left: 2px !important;
-  }
+#nav-bar #PanelUI-button #PanelUI-menu-button {
+  padding-right: 4px !important;
+  padding-left: 2px !important;
+}
+
+/* Fix for web apps */
+#navigator-toolbox[tabs-hidden] {
+	#nav-bar .titlebar-buttonbox-container {
+	  display: none !important;
+	}
+}
 
  /* ----------------------------------------------------------------- */
  /* ---------- Default OS style close/min/max window buttons -------- */
