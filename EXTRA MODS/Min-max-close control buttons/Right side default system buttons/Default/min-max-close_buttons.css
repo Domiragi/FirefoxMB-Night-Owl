@@ -37,7 +37,7 @@
     min-width: 28px !important;
   }
 
-  @media not (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
+  @media not -moz-pref("firefoxcss.tabs.on.top.enable") {
     #toolbar-menubar .titlebar-button {
       padding-block: 0px !important;
     }
@@ -55,7 +55,7 @@
         padding-right: initial !important;
       }
 
-    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media not -moz-pref("sidebar.verticalTabs") {
 
 
       /* #nav-bar {

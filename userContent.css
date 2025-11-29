@@ -971,3 +971,10 @@ url("about:newtab") {
     text-shadow: 0.5px 0.5px 0.5px black, 0 0 1px black, 0 0 1px black !important;
   }
 }
+
+/* Custom font */
+@-moz-document url-prefix(about:) {
+  * {
+	  font-family: var(--custom-font);
+  }
+}

@@ -1771,11 +1771,7 @@ toolbar
   }
 }
 
-
 /* Set fonts */
-/* Note: need to be at the bottom of the file */
-*,
-*::before,
-*::after {
+* {
 	font-family: var(--custom-font);
 }
