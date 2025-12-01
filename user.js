@@ -124,6 +124,7 @@ user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("privacy.trackingprotection.pbmode.enabled", true); // Enable tracking protection in Private Browsing Mode
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
+user_pref("security.allow_unsafe_dangerous_privileged_evil_eval", true); // only required if you're using any of the JS scripts that use eval()
 user_pref("signon.autofillForms", false); // Disable autofilling logins and passwords
 user_pref("signon.rememberSignons", false); // Never to ask to save logins and  passwords
 user_pref("slider.snapMultiplier", 0); // Disable effect: when dragging a scrollbar, if the mouse moves too far away then snap back to top
