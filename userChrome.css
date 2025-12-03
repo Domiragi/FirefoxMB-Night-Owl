@@ -179,6 +179,8 @@
   @media not -moz-pref("sidebar.verticalTabs") {
     --tab-block-margin: 12px !important; /* Default: 4px */
     --tab-min-height: 28px !important; /* Default: 36px */
+    /* --tab-margin-top: 4px;
+    --tab-margin-bottom: 6px; */
     --tabstrip-min-height: 28px !important;
   }
 
@@ -625,7 +627,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   }
 } */
 
-@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+@media not -moz-pref("sidebar.verticalTabs") {
   /* Speaker on tabs color fixes */
   .tabbrowser-tab:not([pinned]) .tab-icon-overlay:not([crashed]) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
@@ -709,10 +711,14 @@ about:config -> svg.context-properties.content.enabled -> true*/
     margin-inline-start: 0px !important;
   }
 
-  /* #tabbrowser-tabs {
+  #tabbrowser-tabs {
     margin-left: 2px !important;
     margin-right: 2px !important;
-  } */
+  }
+
+  #alltabs-button {
+    margin-right: 2px !important;
+  }
 
   /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
   /* not([style^="max-width"] :not([overflow])*/
