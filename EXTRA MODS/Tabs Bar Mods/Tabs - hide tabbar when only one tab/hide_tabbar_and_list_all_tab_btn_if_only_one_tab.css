@@ -1,0 +1,40 @@
+/* Auto hide tab bar and the list-all-tab btn if there is only 1 tab */
+
+/*======================= TAB BAR =======================*/
+#tabbrowser-tabs, #tabbrowser-arrowscrollbox {
+  min-height: 0 !important;
+  transition: min-height 150ms ease-in-out, opacity 150ms ease-in-out !important;
+}
+
+#tabbrowser-tabs:has(.tabbrowser-tab:only-of-type):not(:has(tab-group)),
+#tabbrowser-tabs:has(.tabbrowser-tab:only-of-type):not(:has(tab-group)) + #tabbrowser-arrowscrollbox-periphery {
+  height: 0px !important;
+  opacity: 0 !important;
+}
+
+#tabbrowser-tabs:not(:has(.tabbrowser-tab:only-of-type)),
+#tabbrowser-tabs:has(.tabbrowser-tab[pinned]):has(.tabbrowser-tab:not([pinned])),
+#tabbrowser-tabs:not(:has(.tabbrowser-tab:only-of-type)) + #tabbrowser-arrowscrollbox-periphery,
+#tabbrowser-tabs:has(.tabbrowser-tab[pinned]):has(.tabbrowser-tab:not([pinned])) + #tabbrowser-arrowscrollbox-periphery {
+  min-height: var(--tab-min-height) !important;
+  height: auto !important;
+  opacity: 1 !important;
+}
+
+/* Avoid an issue with the bottom of tabbar adjusting and covering the tabs when moving tabs */
+#tabbrowser-tabs[movingtab],
+#tabbrowser-tabs[movingtab] + #tabbrowser-arrowscrollbox-periphery {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: var(--tab-min-height) !important;
+  height: auto !important;
+}
+
+/*======================= LiST-ALL-TAB BTN =======================*/
+#tabbrowser-tabs:has(.tabbrowser-tab:only-of-type):not(:has(tab-group)) ~ #alltabs-button {
+  display: none !important;
+}
+#tabbrowser-tabs:not(:has(.tabbrowser-tab:only-of-type)) ~ #alltabs-button,
+#tabbrowser-tabs:has(.tabbrowser-tab[pinned]):has(.tabbrowser-tab:not([pinned])) ~ #alltabs-button {
+  display: revert !important;
+}
