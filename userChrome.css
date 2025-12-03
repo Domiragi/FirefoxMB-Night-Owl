@@ -177,10 +177,8 @@
     var(--firefoxcss-border-radius) - 2px
   ) !important;
   @media not -moz-pref("sidebar.verticalTabs") {
-    --tab-block-margin: 2px !important; /* Default: 4px */
-    --tab-min-height: 26px !important; /* Default: 36px */
-    --tab-margin-top: 4px;
-    --tab-margin-bottom: 6px;
+    --tab-block-margin: 12px !important; /* Default: 4px */
+    --tab-min-height: 28px !important; /* Default: 36px */
     --tabstrip-min-height: 28px !important;
   }
 
@@ -711,10 +709,10 @@ about:config -> svg.context-properties.content.enabled -> true*/
     margin-inline-start: 0px !important;
   }
 
-  #tabbrowser-tabs {
+  /* #tabbrowser-tabs {
     margin-left: 2px !important;
     margin-right: 2px !important;
-  }
+  } */
 
   /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
   /* not([style^="max-width"] :not([overflow])*/
@@ -750,10 +748,10 @@ about:config -> svg.context-properties.content.enabled -> true*/
     border: 0 !important;
   }
 
-  #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
+  /* #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
     margin-top: var(--tab-margin-top) !important;
     margin-bottom: var(--tab-margin-bottom) !important;
-  }
+  } */
 
   /* Remove right and left side tab overflow border line */
   #scrollbutton-up ~ spacer {
