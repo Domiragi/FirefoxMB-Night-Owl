@@ -169,7 +169,9 @@
   --firefoxcss-border-radius: 10px;
   --firefoxcss-control-buttons-margin: 0px;
   --firefoxcss-tab-min-width: 45px;
-  --firefoxcss-tab-max-width: 150px;
+  --firefoxcss-tab-max-width: 180px;
+  --firefoxcss-selected-tab-min-width: 180px;
+  --firefoxcss-selected-tab-max-width: 240px;
 
   --firefoxcss-searchbar-height: 28px;
   --firefoxcss-searchbar-container-height: 40px;
@@ -723,20 +725,19 @@ about:config -> svg.context-properties.content.enabled -> true*/
   /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
   /* not([style^="max-width"] :not([overflow])*/
   #tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) {
-    max-width: var(--firefoxcss-tab-max-width) !important;
     min-width: var(--firefoxcss-tab-min-width) !important;
+    max-width: var(--firefoxcss-tab-max-width) !important;
   }
 
   /* Selected tabs width increase */
-  #tabbrowser-tabs:not([overflow])
-    .tabbrowser-tab[selected][fadein]:not([pinned]) {
-    min-width: 150px !important;
-    max-width: 175px !important;
+  #tabbrowser-tabs:not([overflow]) .tabbrowser-tab[selected][fadein]:not([pinned]) {
+    min-width: var(--firefoxcss-selected-tab-min-width) !important;
+    max-width: var(--firefoxcss-selected-tab-max-width) !important;
   }
 
   /* Selected tabs width when overflowing */
   #tabbrowser-tabs[overflow] .tabbrowser-tab[selected][fadein]:not([pinned]) {
-    min-width: 150px !important;
+    min-width: var(--firefoxcss-selected-tab-min-width) !important;
   }
 
   /*
