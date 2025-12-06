@@ -1,7 +1,7 @@
 <h2 align="center"><a href="#wrench-installation"><img src="https://user-images.githubusercontent.com/61329159/204102654-0e414196-bea2-4147-9e1e-aeb8b4190893.png" width="20" height="20" /></a> Firefox Mod Blur - Night Owl</h2>
 
 <p align="center">
-<a href="#version_badge"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v136.x-blue?style=flat&logo=firefox&logoColor=white"></a>
+<a href="#version_badge"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v145.x-blue?style=flat&logo=firefox&logoColor=white"></a>
 </p>
 
 <p align="center">
