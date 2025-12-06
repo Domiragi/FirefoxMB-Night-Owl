@@ -198,7 +198,7 @@ menupopup {
 
 menupopup,
 panel {
-  :not(#ContentSelectDropdown) > & {
+  :not(#ContentSelectDropdown) > &:not(#ctrlTab-panel, #autoscroller) {
     --panel-background: var(--firefoxcss-main-bg-color) !important;
   }
 }
