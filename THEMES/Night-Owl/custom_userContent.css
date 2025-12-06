@@ -71,10 +71,13 @@
   info-item,
   info-group,
   certificate-section {
+    --background-color-canvas: var(--firefoxcss-main-bg-color) !important;
     --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
     --in-content-page-color: hsl(212, 43%, 90%)!important;
     --in-content-text-color: var(--in-content-page-color) !important;
+    --text-color: var(--in-content-page-color) !important;
     --in-content-accent-color: var(--firefoxcss-border-color-highlight) !important;
+    --border-color: var(--firefoxcss-border-color) !important;
     --in-content-border-color: var(--firefoxcss-border-color) !important;
     --in-content-border-hover: var(--firefoxcss-border-color) !important;
     --in-content-border-active: var(--firefoxcss-border-color-highlight) !important;
@@ -86,6 +89,8 @@
     --background-color-box: var(--firefoxcss-secondary-bg-color) !important;
     --in-content-table-background: var(--firefoxcss-secondary-bg-color) !important;
     --in-content-table-header-background: var(--color-accent-primary-active) !important;
+    --in-content-table-header-color: var(--in-content-primary-button-color) !important;
+    --table-row-background-color-alternate: var(--in-content-box-background-odd) !important;
     /* --in-content-link-color: var(--purple-30) !important;
     --in-content-link-color-hover: var(--purple-25) !important;
     --in-content-link-color-active: var(--purple-20) !important;
@@ -98,10 +103,10 @@
     --link-visited-color: var(--pink-40) !important;
     --link-visited-color-hover: var(--pink-35) !important;
     --link-visited-color-active: var(--pink-30) !important; */
-    --button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
-    --button-background-hover: var(--color-accent-primary-hover) !important;
-    --button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
-    --button-background-solid: var(--firefoxcss-button-select-highlight);
+    --button-background-color: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --button-background-color-hover: var(--color-accent-primary-hover) !important;
+    --button-background-color-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --button-background-color-solid: var(--firefoxcss-button-select-highlight) !important;
     --in-content-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
     --in-content-button-background-hover: var(--color-accent-primary-hover) !important;
     --in-content-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
@@ -109,11 +114,21 @@
     --in-content-button-text-color: var(--ui-text-50) !important;
     --in-content-button-text-color-hover: var(--ui-text-50) !important;
     --in-content-button-text-color-active: var(--ui-text-50) !important;
+    --button-text-color-hover: var(--ui-text-50) !important;
+    --button-text-color-active: var(--ui-text-50) !important;
     --in-content-primary-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
     --in-content-primary-button-background-hover: var(--color-accent-primary-hover) !important;
     --in-content-primary-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
     --in-content-primary-button-text-color: hsl(198, 100%, 9%) !important;
     --in-content-primary-button-text-color-hover: hsl(198, 100%, 9%) !important;
+    --button-background-color-primary:  color-mix(in hsl, var(--color-accent-primary-active), black 30%)  !important;
+    --button-background-color-primary-hover: var(--color-accent-primary-hover) !important;
+    --button-background-color-primary-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --button-text-color-primary: hsl(198, 100%, 9%) !important;
+    --button-text-color-primary-hover: hsl(198, 100%, 9%) !important;
+    --color-accent-primary: hsl(200, 100%, 50%) !important;
+    --color-accent-primary-hover: hsl(200, 100%, 42%) !important;
+    --color-accent-primary-active: hsl(200, 100%, 35%) !important;
     --in-content-button-border-radius: var(--general-button-border-radius) !important;
     --in-content-item-selected: var(--firefoxcss-button-select-highlight) !important;
     --in-content-item-hover: var(--firefoxcss-button-hover-highlight) !important;
@@ -129,11 +144,11 @@
     --newtab-search-header-background-intermediate: color-mix(in srgb, var(--in-content-page-background) 80%, transparent) !important;
     --newtab-seperator-line-color: var(--in-content-button-background-hover) !important;
     --newtab-modal-color: var(--in-content-box-background) !important;
-    /* --newtab-focus-outline: var(--purple-40-a50) !important;
+    --newtab-focus-outline: var(--purple-40-a50) !important;
     --newtab-focus-border: var(--purple-40) !important;
-    --newtab-focus-border-selected: var(--purple-30) !important; */
+    --newtab-focus-border-selected: var(--purple-30) !important;
     --newtab-textbox-background-color: var(--in-content-button-background) !important;
-    /* --newtab-textbox-focus-color: var(--purple-40) !important; */
+    --newtab-textbox-focus-color: var(--purple-40) !important;
     --newtab-primary-action-background: var(--in-content-primary-button-background-hover) !important;
     --newtab-primary-action-background-hover: color-mix(in srgb, var(--purple-30) 60%, var(--newtab-primary-action-background)) !important;
     --newtab-primary-action-background-active: color-mix(in srgb, var(--purple-25) 60%, var(--newtab-primary-action-background)) !important;
@@ -161,6 +176,35 @@
     --newtab-search-text-color: var(--ui-text-70) !important;
     --newtab-search-first-shadow: rgba(21, 20, 26, 0.5);
     --newtab-search-second-shadow: rgba(21, 20, 26, 0.75);
+  }
+
+  moz-input-search {
+    --input-text-border-color: var(--in-content-box-border-color) !important;
+    --input-text-border-color-disabled: var(--border-color-interactive-disabled);
+    --input-text-border-radius: var(--firefoxcss-box-border-radius) !important;
+    --input-text-background-color: var(--background-color-box) !important;
+    --input-text-color: var(--in-content-page-color) !important;
+  }
+  
+  .highlighting-group {
+    --section-highlight-background-color: color-mix(in srgb, var(--color-accent-primary) 8%, transparent) !important;
+  }
+  
+  .privacy-detailedoption:not(.selected) {
+    background-color: var(--in-content-box-background) !important;
+  }
+  
+  #categories > .category[selected],
+  #categories > .category.selected {
+    &:hover {
+      background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
+      color: var(--color-accent-primary-hover) !important;
+  
+      &:active {
+        background-color: color-mix(in srgb, currentColor 14%, transparent) !important;
+        color: var(--color-accent-primary-active) !important;
+      }
+    }
   }
 }
   

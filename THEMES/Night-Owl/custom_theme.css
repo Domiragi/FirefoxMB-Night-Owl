@@ -213,7 +213,7 @@ panel {
 }
 
 /* Change sidebar search box color */
-:where(#sidebar-search-container, .sidebar-search-container) search-textbox {
+:where(#sidebar-search-container, .sidebar-search-container) #search-box {
   appearance: none !important;
   border-radius: var(--firefoxcss-box-border-radius) !important;
   background-color: var(--firefoxcss-secondary-bg-color) !important;
@@ -223,10 +223,15 @@ panel {
   outline: 1px solid var(--firefoxcss-border-color) !important;
   transition: 100ms outline ease-in !important;
 }
-:is(#sidebar-search-container, .sidebar-search-container) search-textbox:focus {
+:is(#sidebar-search-container, .sidebar-search-container) #search-box:focus {
   outline: 2px solid var(--firefoxcss-border-color-highlight) !important;
   transition-duration: 60ms !important;
   transition-timing-function: ease-out !important;
+}
+:is(#sidebar-search-container, .sidebar-search-container) moz-input-search {
+  --input-text-border-color: var(--firefoxcss-border-color) !important;
+  --input-text-border-radius: var(--firefoxcss-box-border-radius) !important;
+  --input-text-background-color: var(--firefoxcss-secondary-bg-color) !important;
 }
 #viewButton {
   border-radius: var(--firefoxcss-box-border-radius) !important;
@@ -499,6 +504,12 @@ tooltip .uc-tooltip-box {
     --organizer-toolbar-field-focus-box-shadow: 0 0 0 0.5px var(--organizer-toolbar-field-focus-border-color) inset !important;
     --organizer-pane-field-border-color: var(--firefoxcss-border-color) !important;
     --download-button-hover-bg: hsla(230, 8%, 80%, 0.12);
+  }
+
+  moz-input-search {
+    --input-text-border-color: var(--firefoxcss-border-color) !important;
+    --input-text-border-radius: var(--firefoxcss-box-border-radius) !important;
+    --input-text-background-color: var(--firefoxcss-secondary-bg-color) !important;
   }
 
   #placesToolbar > toolbarbutton,

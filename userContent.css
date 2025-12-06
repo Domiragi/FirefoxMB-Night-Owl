@@ -950,9 +950,8 @@ url("about:newtab") {
     --newtab-search-first-shadow: rgba(21, 20, 26, 0.5);
     --newtab-search-second-shadow: rgba(21, 20, 26, 0.75);
   }
-}
 
- moz-input-search {
+  moz-input-search {
     --input-text-border-color: var(--in-content-box-border-color) !important;
     --input-text-border-color-disabled: var(--border-color-interactive-disabled);
     --input-text-border-radius: 4px !important;
@@ -980,6 +979,7 @@ url("about:newtab") {
       }
     }
   }
+}
 
 /* firefox screenshots addon overlay */
 @-moz-document regexp("^moz-extension://.*/blank.html.*") {
